@@ -1,0 +1,27 @@
+ALGORITHM ReadSentence
+VAR
+    nbrCaract: INTEGER := 0;
+    nbrMot: INTEGER := 1;
+    i: INTEGER;
+    nbrVoyelle: INTEGER := 0;
+    chaine: STRING;
+BEGIN
+    Write("Saisir une chaine se terminant par un point (.)");
+    Read(chaine);
+
+    FOR i FROM 0 TO chaine.length()-1 STEP step  DO
+        IF (chaine.charAt(i) != '.') THEN
+            nbrCaract := nbrCaract + 1;
+        END_IF
+        IF (chaine.charAt(i) == ' ') THEN
+            nbrMot := nbrMot + 1;
+        END_IF
+        IF (chaine.charAt(i) == 'a' || chaine.charAt(i) == 'e' || chaine.charAt(i) == 'y' || chaine.charAt(i) =='u' || chaine.charAt(i) == 'i' || chaine.charAt(i) == 'o') THEN
+            nbrVoyelle := nbrVoyelle + 1;
+        END_IF
+    END_FOR
+
+    Write("Nombre de Caractère : "+nbrCaract);
+    Write("Nombre de Mot : "+nbrMot);
+    Write("Nombre de Voyelle : "+nbrVoyelle);
+END
