@@ -1,11 +1,12 @@
 ALGORITHM ReadSentence
 VAR
-    nbrCaract: INTEGER := 0;
-    nbrMot: INTEGER := 1;
-    i: INTEGER;
-    nbrVoyelle: INTEGER := 0;
+    nbrCaract, nbrMot, i, nbrVoyelle: INTEGER;
     chaine: STRING;
 BEGIN
+    nbrCaract := 0;
+    nbrMot := 1;
+    nbrVoyelle := 0;
+
     Write("Saisir une chaine se terminant par un point (.)");
     Read(chaine);
 
