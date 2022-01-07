@@ -9,7 +9,7 @@ BEGIN
     Write("Saisir une chaine se terminant par un point (.)");
     Read(chaine);
 
-    FOR i FROM 0 TO chaine.length()-1 STEP step  DO
+    FOR i FROM 0 TO chaine.length()-1 STEP 1  DO
         IF (chaine.charAt(i) != '.') THEN
             nbrCaract := nbrCaract + 1;
         END_IF
